@@ -1,11 +1,8 @@
-from flask import Flask, request, render_template, session, redirect
-import numpy as np
+from flask import Flask, render_template
 import requests 
 import json
 import random
-import pandas as pd
-from pandas import DataFrame as df
-from IPython.display import Image, HTML
+
 
 
 app = Flask(__name__)
