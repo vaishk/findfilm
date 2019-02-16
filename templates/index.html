@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Film Finder</title>
+<style type="text/css">
+	td img {
+		height: 250px; 
+		padding: 10px;
+	}
+
+	table {
+		width: 60%;
+		margin-left: 20%;
+		border-collapse: collapse;
+	}
+
+	body {
+		font-family: Palatino;
+		font-size: 120%;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	tr:nth-child(even){background-color: #f2f2f2;}
+
+	td, th, tr {
+		border: 1px solid #ddd;
+	}
+
+	th {
+		text-align: left;
+    	padding-left: 10px;
+    	padding-bottom: 5px;
+    	padding-top: 5px;
+	}
+
+	h1, p {
+		margin-left: 20%;
+	}
+
+	p {
+		width: 60%;
+	}
+
+</style>
+</head>
+<body>
+<h1>Film Finder</h1> 
+<p>
+	Welcome! This app finds 10 random films from the <b> Criterion collection </b> which has more than 1000 films. Please refresh the page for a new set of films. Get it touch with me at <a href="mailto:mail.vaishalikannan@gmail.com">mail.vaishalikannan@gmail.com </a> if you have any suggestions or feedback.
+</p>
+ <table>
+  <tr>
+  	<th>Poster</th>
+    <th>Title</th>
+    <th>Director</th>
+    <th>Plot</th>
+  </tr>
+
+{% for film in film_list %}
+  <tr>
+	  <td> <img src="{{film[3]}}" /> </td>
+	  <td> {{film[0]}} </td>
+	  <td> {{film[2]}} </td>
+	  <td> {{film[1]}} </td>
+  </tr>
+{% endfor %}
+</table> 
+</body>
+</html>
